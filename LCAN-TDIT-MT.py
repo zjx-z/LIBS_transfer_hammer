@@ -1,4 +1,4 @@
-#该代码用于LCAN，TfS，JT的实验
+#该代码用于LCAN，TfS (TDIT)，JT (MT)的实验
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
