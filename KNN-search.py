@@ -17,8 +17,6 @@ from scipy.stats import randint, uniform  # 用于RandomizedSearchCV的分布
 starttime = time.time()
 
 
-# ========== 原有函数保持不变 ==========
-
 def load_data_from_files(file_list):
     data_frames = []
     for file in file_list:
@@ -110,7 +108,7 @@ def calculate_macro_metrics(y_true, y_pred):
     return macro_precision, macro_recall, macro_f1
 
 
-# ========== 新增：参数搜索函数 ==========
+
 
 def knn_grid_search(X_train, y_train, cv=5, scoring='accuracy', n_jobs=-1):
     """
