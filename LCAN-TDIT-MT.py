@@ -1,4 +1,4 @@
-#该代码用于LCAN，TDIT，MT的实验
+#该代码用于LCAN，TfS，JT的实验
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
@@ -153,30 +153,6 @@ def main():
         'E:\libs\hammer-newlabel4\\20250703.csv',
         'E:\libs\hammer-newlabel4\\20250704-1.csv',
         'E:\libs\hammer-newlabel4\\20250704-2.csv',
-        #'E:\libs\hammer-newlabel4\\20250904.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata\\train0.1.csv'
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train0.8.csv',
-        #'E:\libs\hammer-newlabel4\\transferlearningdata-new\\train1.0.csv'
-
     ]
     X, y = load_data_from_files(csv_file)
 
