@@ -1,6 +1,3 @@
-
-
-
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
@@ -160,14 +157,7 @@ set_random_seeds(seed_value)
 
 # 指定训练集和测试集文件
 train_csv = [
-    # 'E:\libs\hammer - newlabel3\\20250311.csv',
-    # 'E:\libs\hammer - newlabel3\\0626-2.csv',
-    # 'E:\libs\hammer - newlabel3\\20250702-1.csv',
-    # 'E:\libs\hammer - newlabel3\\20250702-2.csv',
-    # 'E:\libs\hammer - newlabel3\\20250703.csv',
-    # 'E:\libs\hammer - newlabel3\\20250704-1.csv',
-    # 'E:\libs\hammer - newlabel3\\20250704-2.csv',
-    #'E:\\libs\\20250702_1+20250702_2+20250703+20250704_1(no safehammer).csv'
+   
         'E:\libs\hammer-newlabel4\\20250311.csv',
         'E:\libs\hammer-newlabel4\\0626-2.csv',
         #'E:\libs\hammer-newlabel4\\20250702-1.csv',
@@ -199,18 +189,6 @@ else:
 
 
 
-
-# # 加载指定特征名称
-# selected_features_file = 'E:\libs\code\mycode\experiments\\newlabel_manselected_features.xlsx'  # 替换为你的Excel文件路径
-# selected_features = load_selected_features(selected_features_file)
-#
-# # 筛选指定特征
-# X_train_filtered, selected_indices = filter_features(X_train, feature_names, selected_features)
-# X_test_filtered, _ = filter_features(X_test, feature_names, selected_features)
-#
-# # 转换为 2D
-# X_train_2d = X_train_filtered.reshape(X_train_filtered.shape[0], -1)
-# X_test_2d = X_test_filtered.reshape(X_test_filtered.shape[0], -1)
 
 
 
@@ -267,86 +245,6 @@ print(f"Macro-average Recall: {macro_recall:.4f}")
 print(f"Macro-average F1 Score: {macro_f1:.4f}")
 
 
-# print("SVM Classification Report:\n", classification_report(y_test, y_pred))
-#
-# for _ in range(len(y_test)):
-#     print(y_test[_][0],y_pred[_])
-# # Rank 指标
-# rank_metrics = calculate_rank_metrics(y_test, y_prob)
-# for rank, value in rank_metrics.items():
-#     print(f"{rank}: {value:.4f}")
-
-# # 计算 Rank 指标
-# rank_metrics = calculate_rank_metrics(y_test, y_pred)
-# for rank, value in rank_metrics.items():
-#     #print(f"{rank}: {value:.4f}")
-#     print(f"{value:.4f}")
-#     pass
-'''
-# 计算 per-class AP
-aps = calculate_per_class_ap(y_test, y_prob)
-mAP = calculate_map(aps)
-
-# 打印每个类别的 AP 和 mAP
-for c, ap in enumerate(aps):
-    #print(f"Class {c + 1} AP: {ap:.4f}")
-    pass
-print(f"mAP: {mAP:.4f}")
-'''
-'''
-importances=rf.feature_importances_
-feat_imp=pd.Series(importances,index=feature_names).sort_values(ascending=False)
-
-# print("特征重要性排序：")
-# print(feat_imp)
-feat_imp_df = pd.DataFrame({
-    'Feature': feature_names,
-    'Importance': importances
-}).sort_values(by='Importance', ascending=False)
-feat_imp_df.to_excel('feature_importance_Al_newlabel0704-1.xlsx', index=False)
-print("特征重要性已保存为 'feature_importance_Al_newlabel0704-1.xlsx'")
-'''
-'''
-import seaborn as sns
-import matplotlib.pyplot as plt
-#
-# sns.barplot(x=feat_imp[:30], y=feat_imp.index[:30])
-# plt.title("Feature Importance from Random Forest")
-# plt.show()
-
-wavelengths = np.array([float(name) for name in feature_names])  # 如果特征名是波长
-#fig, ax1 = plt.subplots(figsize=(12, 5))
-
-# 左轴：光谱强度（线图）
-# ax1.plot(wavelengths, importances, color='tab:blue')
-# ax1.set_xlabel("Wavelength (nm)")
-# ax1.set_ylabel("feature importance", color='tab:blue')
-# ax1.tick_params(axis='y', labelcolor='tab:blue')
-# fig.tight_layout()
-# plt.show()
-
-X,y=load_data("E:\libs\spectra_samples.csv")
-
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 8), sharex=True)
-
-# 上图：所有样本的光谱曲线
-for spectrum in X:
-    ax1.plot(wavelengths, spectrum, linewidth=0.6, alpha=0.7)
-ax1.set_ylabel('Intensity')
-ax1.set_title('All sample spectra')
-
-# 下图：RF 特征重要性
-ax2.bar(wavelengths, importances,
-        width=np.diff(wavelengths).mean()*0.8,
-        color='firebrick', alpha=0.8)
-ax2.set_xlabel('Wavelength (nm)')
-ax2.set_ylabel('RF importance')
-ax2.set_title('Feature importance from Random Forest-traindata3456no_safehammer')
-
-plt.tight_layout()
-plt.show()
-plt.savefig('plot.png')
-'''
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
