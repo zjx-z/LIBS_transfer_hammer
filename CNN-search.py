@@ -258,7 +258,7 @@ def build_hypermodel(hp):
     return model
 
 
-# 或者使用更简洁的基于sklearn的回调方式（推荐，更准确）
+# 或者使用更简洁的基于sklearn的回调方式
 from sklearn.metrics import f1_score
 import numpy as np
 
@@ -305,14 +305,14 @@ def main():
     X, y = load_data_from_files(csv_file)
     test_csv = 'E:\libs\hammer-newlabel4\\20250702-1.csv'
     X_test, y_test_ = load_data(test_csv)
-    # 2. 手动调这里：验证集占“剩余 80 %”的比例
+    # 2. 手动调这里：验证集占“剩余 20 %”的比例
     val_ratio = 0.2         # 20 %、30 %、40 % 随意改
 
 
     # 3. 拆分成train / val
     X_train, X_val, y_train_, y_val_ = train_test_split(
         X, y,
-        test_size=val_ratio,          # 注意：这里是占 80 % 的比例
+        test_size=val_ratio,          
         random_state=seed_value,
         stratify=y)
 
@@ -384,7 +384,7 @@ def main():
     # 训练最终模型（可以增加epochs）
     history = best_model.fit(
         X_train, y_train,
-        epochs=20,  # 更多轮数
+        epochs=20,  
         batch_size=8,
         validation_data=(X_val, y_val),
         callbacks=[reduce_lr],
