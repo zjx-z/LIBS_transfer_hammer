@@ -30,7 +30,7 @@ class GradientReversal(Layer):
     """Gradient Reversal Layer (GRL) 支持动态 λ"""
     def __init__(self, lambda_var, **kwargs):
         super().__init__(**kwargs)
-        self.lambda_var = lambda_var          # 传入 tf.Variable
+        self.lambda_var = lambda_var          
 
     @tf.custom_gradient
     def call(self, x):
@@ -286,23 +286,23 @@ def draw_tsne(X_src_test,X_tgt_test,y_src_test,y_tgt_test,title):
 
     # 定义类别到颜色的映射
     color_map = {
-        0: 'blue',  # 类别 0 使用蓝色
-        1: 'blue',  # 类别 1 使用红色
-        2: 'blue',  # 类别 2 使用绿色
-        3: 'blue',  # 类别 0 使用蓝色
-        4: 'blue',  # 类别 1 使用红色
-        5: 'red',  # 类别 2 使用绿色
-        6: 'red',  # 类别 0 使用蓝色
-        7: 'red',  # 类别 1 使用红色
-        8: 'red',  # 类别 2 使用绿色
-        9: 'green',  # 类别 0 使用蓝色
-        10: 'green',  # 类别 1 使用红色
-        11: 'green',  # 类别 2 使用绿色
-        12: 'green',  # 类别 0 使用蓝色
-        13: 'green',  # 类别 1 使用红色
-        14: 'yellow',  # 类别 2 使用绿色
-        15: 'yellow',  # 类别 0 使用蓝色
-        16: 'yellow',  # 类别 1 使用红色
+        0: 'blue',  
+        1: 'blue',  
+        2: 'blue',  
+        3: 'blue',  
+        4: 'blue',  
+        5: 'red',  
+        6: 'red',  
+        7: 'red',  
+        8: 'red',  
+        9: 'green',  
+        10: 'green',  
+        11: 'green',  
+        12: 'green',  
+        13: 'green',  
+        14: 'yellow',  
+        15: 'yellow',  
+        16: 'yellow',  
 
     }
 
@@ -356,23 +356,23 @@ def draw_tsne2(X_src_test,X_tgt_test,y_src_test,y_tgt_test,title):
 
     # 定义类别到颜色的映射
     color_map = {
-        0: 'blue',  # 类别 0 使用蓝色
-        1: 'blue',  # 类别 1 使用红色
-        2: 'blue',  # 类别 2 使用绿色
-        3: 'blue',  # 类别 0 使用蓝色
-        4: 'blue',  # 类别 1 使用红色
-        5: 'red',  # 类别 2 使用绿色
-        6: 'red',  # 类别 0 使用蓝色
-        7: 'red',  # 类别 1 使用红色
-        8: 'red',  # 类别 2 使用绿色
-        9: 'green',  # 类别 0 使用蓝色
-        10: 'green',  # 类别 1 使用红色
-        11: 'green',  # 类别 2 使用绿色
-        12: 'green',  # 类别 0 使用蓝色
-        13: 'green',  # 类别 1 使用红色
-        14: 'yellow',  # 类别 2 使用绿色
-        15: 'yellow',  # 类别 0 使用蓝色
-        16: 'yellow',  # 类别 1 使用红色
+        0: 'blue',  
+        1: 'blue',  
+        2: 'blue',  
+        3: 'blue',  
+        4: 'blue',  
+        5: 'red',  
+        6: 'red',  
+        7: 'red',  
+        8: 'red',  
+        9: 'green',  
+        10: 'green',  
+        11: 'green',  
+        12: 'green',  
+        13: 'green', 
+        14: 'yellow',  
+        15: 'yellow',  
+        16: 'yellow',  
 
     }
 
@@ -421,23 +421,23 @@ from sklearn.manifold import TSNE
 def draw_tsne3(X_src_test, X_tgt_test, y_src_test, y_tgt_test, title, output_file):
     # 定义类别到颜色的映射
     color_map = {
-        0: 'blue',  # 类别 0 使用蓝色
-        1: 'blue',  # 类别 1 使用红色
-        2: 'blue',  # 类别 2 使用绿色
-        3: 'blue',  # 类别 0 使用蓝色
-        4: 'blue',  # 类别 1 使用红色
-        5: 'red',  # 类别 2 使用绿色
-        6: 'red',  # 类别 0 使用蓝色
-        7: 'red',  # 类别 1 使用红色
-        8: 'red',  # 类别 2 使用绿色
-        9: 'green',  # 类别 0 使用蓝色
-        10: 'green',  # 类别 1 使用红色
-        11: 'green',  # 类别 2 使用绿色
-        12: 'green',  # 类别 0 使用蓝色
-        13: 'green',  # 类别 1 使用红色
-        14: 'yellow',  # 类别 2 使用绿色
-        15: 'yellow',  # 类别 0 使用蓝色
-        16: 'yellow',  # 类别 1 使用红色
+        0: 'blue',  
+        1: 'blue',  
+        2: 'blue',  
+        3: 'blue',  
+        4: 'blue', 
+        5: 'red',  
+        6: 'red',  
+        7: 'red',  
+        8: 'red',  
+        9: 'green',  
+        10: 'green',  
+        11: 'green',  
+        12: 'green',
+        13: 'green',  
+        14: 'yellow',  
+        15: 'yellow',  
+        16: 'yellow',  
     }
 
     # 展平特征向量
@@ -446,7 +446,7 @@ def draw_tsne3(X_src_test, X_tgt_test, y_src_test, y_tgt_test, title, output_fil
 
     # 合并展平后的特征
     all_feats = np.vstack((X_src_test_2d, X_tgt_test_2d))
-    tsne = TSNE(n_components=3, random_state=42)  # 修改为3维
+    tsne = TSNE(n_components=3, random_state=42) 
     all_feats_3d = tsne.fit_transform(all_feats)
 
     # 分离源域和目标域的特征
@@ -506,23 +506,23 @@ def draw_tsne3(X_src_test, X_tgt_test, y_src_test, y_tgt_test, title, output_fil
 def draw_tsne4(X_src_test, X_tgt_test, y_src_test, y_tgt_test, title, output_file):
     # 定义类别到颜色的映射
     color_map = {
-        0: 'blue',  # 类别 0 使用蓝色
-        1: 'blue',  # 类别 1 使用红色
-        2: 'blue',  # 类别 2 使用绿色
-        3: 'blue',  # 类别 0 使用蓝色
-        4: 'blue',  # 类别 1 使用红色
-        5: 'red',  # 类别 2 使用绿色
-        6: 'red',  # 类别 0 使用蓝色
-        7: 'red',  # 类别 1 使用红色
-        8: 'red',  # 类别 2 使用绿色
-        9: 'green',  # 类别 0 使用蓝色
-        10: 'green',  # 类别 1 使用红色
-        11: 'green',  # 类别 2 使用绿色
-        12: 'green',  # 类别 0 使用蓝色
-        13: 'green',  # 类别 1 使用红色
-        14: 'yellow',  # 类别 2 使用绿色
-        15: 'yellow',  # 类别 0 使用蓝色
-        16: 'yellow',  # 类别 1 使用红色
+        0: 'blue',  
+        1: 'blue',  
+        2: 'blue',  
+        3: 'blue',  
+        4: 'blue', 
+        5: 'red',  
+        6: 'red',  
+        7: 'red',  
+        8: 'red',  
+        9: 'green',  
+        10: 'green',  
+        11: 'green',  
+        12: 'green',
+        13: 'green',  
+        14: 'yellow',  
+        15: 'yellow',  
+        16: 'yellow',  
     }
 
     # 展平特征向量
