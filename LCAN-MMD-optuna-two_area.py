@@ -161,23 +161,23 @@ from sklearn.manifold import TSNE
 def draw_tsne4(X_src_test, X_tgt_test, y_src_test, y_tgt_test, title, output_file):
     # 定义类别到颜色的映射
     color_map = {
-        0: 'blue',  # 类别 0 使用蓝色
-        1: 'blue',  # 类别 1 使用红色
-        2: 'blue',  # 类别 2 使用绿色
-        3: 'blue',  # 类别 0 使用蓝色
-        4: 'blue',  # 类别 1 使用红色
-        5: 'red',  # 类别 2 使用绿色
-        6: 'red',  # 类别 0 使用蓝色
-        7: 'red',  # 类别 1 使用红色
-        8: 'red',  # 类别 2 使用绿色
-        9: 'green',  # 类别 0 使用蓝色
-        10: 'green',  # 类别 1 使用红色
-        11: 'green',  # 类别 2 使用绿色
-        12: 'green',  # 类别 0 使用蓝色
-        13: 'green',  # 类别 1 使用红色
-        14: 'yellow',  # 类别 2 使用绿色
-        15: 'yellow',  # 类别 0 使用蓝色
-        16: 'yellow',  # 类别 1 使用红色
+        0: 'blue', 
+        1: 'blue',
+        2: 'blue', 
+        3: 'blue', 
+        4: 'blue', 
+        5: 'red', 
+        6: 'red', 
+        7: 'red',
+        8: 'red',  
+        9: 'green',  
+        10: 'green', 
+        11: 'green', 
+        12: 'green', 
+        13: 'green',  
+        14: 'yellow',  
+        15: 'yellow', 
+        16: 'yellow', 
     }
 
     # 展平特征向量
@@ -304,7 +304,7 @@ def main():
         #eval_results[0]: 总损失，包括源域损失、目标域损失和 MMD 损失的加权和。
         #eval_results[1]: 源域的损失（categorical_crossentropy）。
         #eval_results[2]: 目标域的损失（categorical_crossentropy）。
-        #eval_results[1]: 源域的
+       
         '''
 
         return eval_results[3]+eval_results[4]
